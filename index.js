@@ -27,10 +27,16 @@ async function getRandomRecipe() {
         ingredientList.appendChild(ingredientLiElement);
     });
 
+    const year = new Date().getFullYear();
+
+    const footer = document.createElement("footer");
+    footer.innerHTML = `&#169 ${year}`;
+
     containerElement.appendChild(recipeTitle);
     containerElement.appendChild(recipeImage);
     containerElement.appendChild(ingredientList);
     containerElement.appendChild(instructionsBlock);
+    containerElement.appendChild(footer);
 }
 
 getRandomRecipe();
